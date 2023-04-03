@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strpbrk - Finds the first occurrence of any character in `accept` within `s`
+ * _strpbrk - Find the first occurrence of any character in `accept` within `s`
  * @s: The string to be searched
  * @accept: The set of characters to search for
  *
@@ -17,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 			if (*s == accept[g])
 				return (s);
 		}
-			s++;
+		s++;
 	}
 	return ('\0');
 }
