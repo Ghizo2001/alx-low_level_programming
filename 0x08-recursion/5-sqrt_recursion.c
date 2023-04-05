@@ -5,6 +5,8 @@
  *
  * Return:result quare root
  */
+int natural_sqrt_recursion(int n, int r);
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
