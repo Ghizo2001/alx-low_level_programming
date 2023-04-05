@@ -1,11 +1,12 @@
 #include "main.h"
+int natural_sqrt_recursion(int n, int r);
+
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: the number that its square root will be calculated
  *
  * Return:result quare root
  */
-int natural_sqrt_recursion(int n, int r);
 
 int _sqrt_recursion(int n)
 {
