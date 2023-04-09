@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int cents, coins = 0;
 	int denominations[] = {25, 10, 5, 2, 1};
 	int num_denominations = 5;
+	int i = 0;
 
 	if (argc != 2)
 	{
@@ -26,13 +27,14 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (int i = 0; i < num_denominations; i++)
+
+	while (i < num_denominations && cents > 0)
 	{
-		while (cents >= denominations[i])
-		{
-			coins++;
-			cents -= denominations[i];
-		}
+		int num_coins = cents / denominations[i];
+
+			coins += num_coins;
+			cents -= num_coins * denominations[i];
+			i++;
 	}
 	printf("%d\n", coins);
 	return (0);
