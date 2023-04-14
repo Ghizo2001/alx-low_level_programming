@@ -61,21 +61,13 @@ int is_digits(char *str)
 {
 	int i = 0;
 
-	if (str[0] == '-' || isdigit(str[0]))
+	while (str[i])
 	{
-		i++;
-		while (str[i])
-		{
-			if (!isdigit(str[i]))
-				return (0);
-			i++;
-		}
-		return (1);
-	}
-		else
-		{
+		if (str[i] < '0' || str[i] > '9')
 			return (0);
-		}
+		i++;
+	}
+	return (1);
 }
 /**
  * main - Entry point of the program
